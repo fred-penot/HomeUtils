@@ -1,0 +1,71 @@
+<ion-view view-title="Infos serveur" ng-controller="DataUsageCtrl">
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <div class="row" style="height: 50px; margin-left: 1px; margin-right: 1px">
+          <div class="col col-60"></div>
+          <div class="col col-20" ng-repeat="actionButton in actionButtons">
+            <button class="button button-icon" style="text-align: center; color: white; font-weight: bold;
+                            width: 100%; height: 100%; border-color: black; background-color: #5bc0de"
+                    ng-click="launchAction($index)">
+              <i class="icon {{actionButton.icon}}" ng-if="!actionButton.loading"></i>
+              <i class="icon fa fa-spinner fa-pulse" ng-if="actionButton.loading"></i>
+            </button>
+          </div>
+        </div>
+        <div class="row" style="margin-left: 1px; margin-right: 1px">
+          <div class="col col-90">
+            <i class="icon ion-stats-bars"></i>&nbsp;&nbsp;Mémoire
+          </div>
+        </div>
+        <div class="row">
+          <table class="table">
+            <thead>
+            <tr>
+              <th style="padding: 10px; font-weight: bold;">Total</th>
+              <th style="padding: 10px; font-weight: bold;">Utilisé</th>
+              <th style="padding: 10px; font-weight: bold;">Libre</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td style="padding: 10px">{{ ramTotal }}</td>
+              <td style="padding: 10px">{{ ramUsed }}</td>
+              <td style="padding: 10px">{{ ramFree }}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </ion-item>
+      <ion-item>
+        <div class="row">
+          <div class="col col-90">
+            <i class="icon ion-ios-filing-outline"></i>&nbsp;&nbsp;Disque
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <table class="table">
+              <thead>
+              <tr>
+                <th style="padding: 10px; font-weight: bold;">Nom</th>
+                <th style="padding: 10px; font-weight: bold;">Total</th>
+                <th style="padding: 10px; font-weight: bold;">Utilisé</th>
+                <th style="padding: 10px; font-weight: bold;">Libre</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr ng-repeat="disk in disks">
+                <td style="border-top: 0px; padding: 10px; font-weight: bold;">{{ disk.mountPoint.name }}</td>
+                <td style="border-top: 0px; padding: 10px">{{ disk.info.totalSize }}</td>
+                <td style="border-top: 0px; padding: 10px">{{ disk.info.sizeUsed }} ({{ disk.info.sizeUsedPourcent }})</td>
+                <td style="border-top: 0px; padding: 10px">{{ disk.info.sizeFree }}</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
