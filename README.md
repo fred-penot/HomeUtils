@@ -6,7 +6,7 @@ Domotic and media home services
 - nodeJs
 - android-sdk
 
-# Installation
+# Linux installation
 
 cd /path/to/HomeUtils
 
@@ -14,17 +14,20 @@ chmod -Rf 755 ../HomeUtils
 
 ./install.sh
 
-# Test web
+# Web test
+
 cd /path/to/HomeUtils
 
 ./ionic serve
 
-# Test android
+# Android test
+
 cd /path/to/HomeUtils
 
 ./ionic emulate android
 
-# Generate android key
+# Generate Android key
+
 cd /path/to/HomeUtils
 
 ./generateKeystore.sh
@@ -32,6 +35,7 @@ cd /path/to/HomeUtils
 Follow instructions and enjoy..
 
 # Export APK
+
 cd /path/to/HomeUtils
 
 ./build.sh
