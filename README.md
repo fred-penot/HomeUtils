@@ -1,7 +1,7 @@
 # HomeUtils
 
 # Require
-nodeJs
+nodeJs\n
 android-sdk
 
 # Installation
