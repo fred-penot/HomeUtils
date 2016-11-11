@@ -1,10 +1,10 @@
 # HomeUtils
+Domotic and media home services 
 
 # Require
 
-nodeJs
-
-android-sdk
+- nodeJs
+- android-sdk
 
 # Installation
 
