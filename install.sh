@@ -18,6 +18,7 @@ echo "#####################################" >> ${path_install}/install.log
 
 cd ${path_install}/App
 npm install >> ${path_install}/install.log
+export PATH=${path_install}/App/node_modules/gulp/bin:$PATH
 
 echo "######################################" >> ${path_install}/install.log
 echo "## Installation des plugins cordova ##" >> ${path_install}/install.log
@@ -38,6 +39,13 @@ echo "####################################" >> ${path_install}/install.log
 
 cd ${path_install}/App
 bower install >> ${path_install}/install.log
+
+echo "#################################" >> ${path_install}/install.log
+echo "## Generation des fichiers css ##" >> ${path_install}/install.log
+echo "#################################" >> ${path_install}/install.log
+
+cd ${path_install}/App
+gulp.js >> ${path_install}/install.log
 
 echo "###########################" >> ${path_install}/install.log
 echo "## Installation du hooks ##" >> ${path_install}/install.log
