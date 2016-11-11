@@ -1,10 +1,10 @@
 <ion-view view-title="Service" ng-controller="ServiceCtrl">
-  <ion-content>
-    <div class="row" style="height: 50px"></div>
-    <div class="row" ng-repeat="service in services" style="height: 150px; text-align: center; margin-left: 1px; margin-right: 1px">
+  <ion-content class="service">
+    <div class="row"></div>
+    <div class="row" ng-repeat="service in services">
       <div class="col col-25"></div>
       <div class="col col-50">
-        <button class="button button-icon" style="color: white; font-weight: bold; width: 100%; height: 100%; border-color: black; background-color: #5bc0de"
+        <button class="button button-icon"
                 ng-click="putService($index)">
           <i class="icon ion-power icon-larger" ng-if="service.info.isRunning && !service.loading"></i>
           <i class="icon ion-flash icon-larger" ng-if="!service.info.isRunning && !service.loading"></i>
