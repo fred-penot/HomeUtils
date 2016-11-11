@@ -1,5 +1,9 @@
 # HomeUtils
 
+# Require
+nodeJs
+android-sdk
+
 # Installation
 
 cd /path/to/HomeUtils
