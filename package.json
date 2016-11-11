@@ -1,6 +1,6 @@
 {
   "name": "ionic-homeutils-project",
-  "description": "HomeUtils: An Ionic project",
+  "description": "Domotic and media home services",
   "dependencies": {
     "bower": "1.7.9",
     "cordova": "6.3.1",
