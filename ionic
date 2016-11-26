@@ -1,4 +1,4 @@
-cd /home/HomeUtils
+cd /home/docker/HomeUtils
 
 current_path=`pwd`
 param1=$1
