@@ -1,4 +1,4 @@
-cd /home/docker/HomeUtils
+cd /home/apps/workspace/docker/js/HomeUtils
 
 current_path=`pwd`
 param1=$1
